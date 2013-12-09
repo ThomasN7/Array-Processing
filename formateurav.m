@@ -5,7 +5,7 @@ function [ w ] = formateurav( R, a0, r )
 %   R est la mtrice de covariance, a0 le vecteur directeur, r le nombre
 %   d'iterations de l'agorithme
 
-taille = lengh(a0);
+taille = length(a0);
 w = zeros(taille, r+1);
 w(:,1) = a0/(a0'*a0);
 Proj = eye(taille) - a0*a0' ./ (a0'*a0);
